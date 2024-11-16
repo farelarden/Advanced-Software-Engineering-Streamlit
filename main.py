@@ -12,6 +12,7 @@ from core import methods             as m1
 from core import HelperTools         as ht
 
 from config                          import pdict
+from core.methods import sort_by_plz_add_geometry, preprop_lstat, count_plz_occurrences,preprop_resid, make_streamlit_electric_Charging_resid 
 
 # -----------------------------------------------------------------------------
 @ht.timer
@@ -27,7 +28,12 @@ def main():
     df_residents    = pd.read_csv("datasets/downloaded_datasets/plz_einwohner.csv")
     # pd.read_csv("datasets\downloaded_datasets\Ladesaeulenregister_SEP.xlsx") #I'm not sure
     gdf_residents2  = pd.read_csv("datasets/geodata_berlin_dis.csv", sep=';')
-    
+
+    res_1 = preprop_lstat(df_lstat, df_geodat_plz, pdict)
+    res_2 = count_plz_occurrences(res_1)
+    res_3 = preprop_resid(df_residents, df_geodat_plz, pdict)
+    res_4 = make_streamlit_electric_Charging_resid(res_2, res_3)
+
 # -----------------------------------------------------------------------------------------------------------------------
 
     #
