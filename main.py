@@ -20,8 +20,8 @@ def main():
 
     df_geodat_plz   = pd.read_csv("datasets/geodata_berlin_plz.csv", sep=';')
     
-    df_lstat = pd.read_excel("datasets/downloaded_datasets/Ladesaeulenregister_SEP.xlsx", header=10)
-    # df_lstat2       = pd.read_csv("datasets\downloaded_datasets\Ladesaeulenregister_SEP.xlsx")
+    # df_lstat = pd.read_excel("datasets/downloaded_datasets/Ladesaeulenregister_SEP.xlsx", header=10)
+    df_lstat2       = pd.read_excel("datasets/downloaded_datasets/Ladesaeulenregister_SEP.xlsx", header=10)
     # gdf_lstat3      = pd.read_csv("datasets\downloaded_datasets\Ladesaeulenregister.csv")
     
     df_residents    = pd.read_csv("datasets/downloaded_datasets/plz_einwohner.csv")
