@@ -18,7 +18,7 @@ from config                          import pdict
 def main():
     """Main: Generation of Streamlit App for visualizing electric charging stations & residents in Berlin"""
 
-    df_geodat_plz   = pd.read_csv("datasets\geodata_berlin_plz.csv", sep=';')
+    df_geodat_plz   = pd.read_csv("datasets/geodata_berlin_plz.csv", sep=';')
     
     df_lstat = pd.read_excel("datasets\downloaded_datasets\Ladesaeulenregister_SEP.xlsx", header=10)
     # df_lstat2       = pd.read_csv("datasets\downloaded_datasets\Ladesaeulenregister_SEP.xlsx")
